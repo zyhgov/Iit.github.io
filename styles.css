@@ -1,0 +1,304 @@
+
+
+
+
+
+
+/* 页面布局容器 */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 让内容至少占满整个视窗高度 */
+    margin: 0 auto; /* 在页面的左右两边留出一定的边距，使得页面居中显示 */
+    max-width: 1200px; /* 设置页面的最大宽度，可以根据需要调整 */
+    padding: 0 20px; /* 设置左右两边的边距 */
+}
+
+/* 顶部头部 */
+.header {
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* 调整上下 padding，左右 padding 为 20px */
+    border-bottom: 3px solid #1c4b82;
+}
+/* Logo 图片 */
+.logo {
+    max-width: 100%;
+    height: auto;
+    flex: 1;
+}
+/* 超链接样式 */
+.nav-link {
+    font-family: 黑体;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+}
+
+/* 鼠标悬停在超链接上时的样式 */
+.nav-link:hover {
+    color: #1c4b82; /* 深蓝色 */
+}
+
+
+
+
+
+/* 搜索框容器 */
+.search-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* 搜索框 */
+.search-box {
+    padding: 5px;
+    border: 1px solid #1c4b82;
+    border-radius: 5px;
+}
+
+/* 搜索按钮 */
+.search-button {
+    background-color: #1c4b82;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+/* 媒体查询 - 当屏幕宽度小于等于 600px 时隐藏搜索框 */
+@media (max-width: 600px) {
+    .search-container {
+        display: none;
+    }
+}
+
+/* 导航栏 */
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-bottom: 3px solid #1c4b82;
+    padding: 10px 0;
+}
+
+/* 导航链接 */
+.nav-link {
+    font-weight: bold;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+/* 页面内容区域 */
+.content {
+    padding: 20px;
+    margin: 20px; /* 调整内容区域的 margin */
+    text-align: center; /* 文字居中显示 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字阴影 */
+    font-size: 55px;
+    font-family: "华文中宋";
+    color: #0d47ba;
+}
+
+
+/* 幻灯片容器 */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  /* 每张幻灯片样式 */
+  .slide {
+    display: none;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* 图片说明样式 */
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+  }
+  
+  /* 导航圆点容器 */
+  .dot-container {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* 导航圆点样式 */
+  .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+  }
+  
+  /* 当前图片导航圆点样式 */
+  .dot.active {
+    background-color: #fff;
+  }
+
+
+/* 分节点样式 */
+.section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* 标题样式 */
+  .section h2 {
+    font-size: 24px;
+    color: #333333;
+    margin-right: 20px;
+  }
+  
+  /* 线条样式 */
+  .blue-line {
+    flex-grow: 1;
+    height: 4px;
+    background-color: #0c4498;
+  }
+
+
+
+  .breadcrumb {
+    font-size: 14px;
+    color: #333;
+    padding: 10px 0;
+  }
+  
+  .breadcrumb a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .content {
+    white-space: nowrap; /* 禁止文本换行 */
+  }
+  
+  /* @media查询，当页面宽度小于768px时，执行下面的样式 */
+  @media (max-width: 768px) {
+    .content {
+      font-size: 35px; /* 缩小字体大小，可以根据需要进行调整 */
+    }
+  }
+  
+
+/* 第一个节点div */
+/* 盒子容器样式 */
+.box-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* 盒子样式 */
+  .box {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    max-width: 30%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: url("img/boxbg.png") center/cover no-repeat; /* 添加背景图 */
+  }
+  
+  /* 盒子标题样式 */
+  .box h2 {
+    border-right: 5px solid #1c69e8;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+  
+  /* 盒子内容样式 */
+  .box .content {
+    max-height: 150px;
+    overflow-y: auto;
+    text-align: left;
+  }
+  
+  /* 超链接样式 */
+  .link {
+    display: block;
+    font-size: 23px;
+    font-family: "黑体", sans-serif;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s; /* 设置颜色过渡效果 */
+  }
+  
+  /* 鼠标悬停时超链接样式 */
+  .link:hover {
+    color: red;
+  }
+  
+  /* 页面缩小时盒子和里面文字同比例缩小 */
+  @media screen and (max-width: 768px) {
+    .box-container {
+      flex-direction: column;
+    }
+  
+    .box {
+      max-width: 100%;
+    }
+  
+    .box .content {
+      max-height: none;
+    }
+  
+    .link {
+      font-size: 20px;
+    }
+  }
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+/* 页面底部 */
+.footer {
+    margin-top: auto; /* 将底部内容顶到底部 */
+    padding: 20px;
+    text-align: center;
+}
+
+/* 页面底部的横线样式 */
+.footer hr {
+    border-color: #1c4b82;
+}
+
+/* 页面底部图片 */
+.footer-image {
+    max-width: 100%;
+    height: auto;
+}
